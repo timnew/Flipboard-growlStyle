@@ -3,15 +3,15 @@
 <plist version="1.1">
 <dict>
 	<key>CFBundleName</key>
-	<string>test</string>
+	<string>Television</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>USA</string>
 	<key>CFBundleGetInfoString</key>
-	<string>a test growl style</string>
+	<string>Television Style</string>
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>com.Growl.WebKit.test</string>
+	<string>com.Growl.WebKit.Television</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>CFBundlePackageType</key>
@@ -27,7 +27,7 @@
 	<key>GrowlPluginAuthor</key>
 	<string>TimNew</string>
 	<key>GrowlHasShadow</key>
-	<false/>
+	<true/>
 	<key>GrowlPaddingX</key>
 	<real>0</real>
 	<key>GrowlPaddingY</key>
