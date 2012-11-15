@@ -70,7 +70,9 @@ task "live", "Deploy to installed package", (options) ->
 
 task "try", "Invoke notification", (options) ->
   runWatch options, ->
-    require('growl') 'Preview Message',
-      image: getLocalPath('source','growl.png')
-      title: 'Preview Title'
+    model = loadModel(options.psudo)
+
+    require('growl') model.text,
+      image: getLocalPath('source', model.image)
+      title: model.title
 
