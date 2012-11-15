@@ -6,7 +6,7 @@ html
     base(href=baseurl)
     style(type="text/css")
       @import URL("default.css");
-  body
+  body(style=bodyStyle)
     .notification(class=priority, style="opacity: #{opacity}")
       h1= title
       hr

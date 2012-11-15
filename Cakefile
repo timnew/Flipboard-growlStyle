@@ -11,6 +11,7 @@ bundleModel = ->
   model = { }
   model[prop] = "%#{prop}%" for prop in ["baseurl", "priority", "opacity", "title", "text", "image"]
   model.image = 'growlimage://' + model.image
+  model[prop] = null for prop in ["bodyStyle"]
   model
 
 loadModel = (file = "psudo") ->
@@ -35,7 +36,9 @@ option '-p', '--psudo [file]', 'Psudo model file, default is psudo.json'
 option '-w', '--watch', "Watch file change"
 
 runWatch = (options, action) ->
-  action(options) unless options.watch
+  unless options.watch
+    action(options)
+    return
   console.info "INFO: Watching..."
   files = fs.readdirSync getLocalPath('source')
   console.log '"Tracking files:'
@@ -62,9 +65,9 @@ task "psudo", "Open fake page in browser", (options) ->
 
 task "live", "Deploy to installed package", (options) ->
   runWatch options, ->
-    rootPath = path.join('~/Libraray/Application\\ Support/Growl/Plugins', "#{styleName}.growlStyle")
+    rootPath = path.join(process.env.HOME,'Library/Application Support/Growl/Plugins', "#{styleName}.growlStyle")
     compileJade getLocalPath('source', 'template.jade'), path.join(rootPath, "Contents", "Resources"), true, bundleModel()
-    compileLess getLocalPath('source', 'default.less'), path.join(rootPath, "#{styleName}.growlStyle", "Contents", "Resources")
+    compileLess getLocalPath('source', 'default.less'), path.join(rootPath, "Contents", "Resources")
 
 task "try", "Invoke notification", (options) ->
   runWatch options, ->

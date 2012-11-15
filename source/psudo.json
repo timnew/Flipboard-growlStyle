@@ -1,7 +1,8 @@
 {
-  "priority": "normal",
-  "opacity": "90%",
-  "title":"Lorem ipsum dolor",
-  "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id odio nisl, ac sagittis orci.",
-  "image":"growl.png"
+    "priority": "normal",
+    "opacity": "90%",
+    "title": "Lorem ipsum dolor",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id odio nisl, ac sagittis orci.",
+    "image": "growl.png",
+    "bodyStyle": "background-color: #eee; background-image: -webkit-linear-gradient(45deg, gray 25%, transparent 25%, transparent 75%, gray 75%, gray), -webkit-linear-gradient(135deg, gray 25%, transparent 25%, transparent 75%, gray 75%, gray); background-size:60px 60px; background-color: #eee; background-image: -webkit-linear-gradient(45deg, gray 25%, transparent 25%, transparent 75%, gray 75%, gray), -webkit-linear-gradient(135deg, gray 25%, transparent 25%, transparent 75%, gray 75%, gray); background-size: 60px 60px;"
 }
