@@ -1,14 +1,14 @@
-doctype 5
+!!! 5
 html
   head
     title Growl notification
     meta(http-equiv="content-type", content="text/html; charset=utf-8")
-    base(href="%baseurl%")
+    base(href=baseurl)
     style(type="text/css")
       @import URL("default.css");
   body
-    .notification(class="%priority%", style="opacity: %opacity%") 
-      h1 %title%
+    .notification(class=priority, style="opacity: #{opacity}")
+      h1= title
       hr
-      p %text%
-    img(src="growlimage://%image%")
+      p= text
+    img(src=image)
