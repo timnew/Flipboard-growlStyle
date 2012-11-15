@@ -14,6 +14,7 @@ html, body {
     width: 300px;
     height: 80px;
     -webkit-border-radius: 5px;
+    overflow: hidden;
 }
 
 .board:before{
@@ -46,6 +47,7 @@ html, body {
     div {
         left: 0;
     }
+    -webkit-animation: 'hide' .2s, 'flip' .4s;
 }
 
 .slice2{
@@ -53,6 +55,7 @@ html, body {
     div {
         left: -60px;
     }
+    -webkit-animation: 'hide' .4s, 'flip' .4s .4s;
 }
 
 .slice3{
@@ -60,6 +63,7 @@ html, body {
     div {
         left: -120px;
     }
+    -webkit-animation: 'hide' .6s, 'flip' .4s .6s;
 }
 
 .slice4{
@@ -67,6 +71,7 @@ html, body {
     div {
         left: -180px;
     }
+    -webkit-animation: 'hide' .8s, 'flip' .4s .8s;
 }
 
 .slice5{
@@ -74,6 +79,7 @@ html, body {
     div {
         left: -240px;
     }
+    -webkit-animation: 'hide' 1s, 'flip' .4s 1s;
 }
 
 .text {
@@ -82,8 +88,9 @@ html, body {
     top: 0;
     left: 0;
     color: white;
-    width: 250px;
+    width: 280px;
     height: 80px;
+    -webkit-animation: 'hide' 1.4s, 'text' .5s 1.4s linear;
 }
 
 h1 {
@@ -91,16 +98,18 @@ h1 {
     max-height: 17px;
     overflow: hidden;
     margin: 10px;
-    color: white;
-    font-size: 14px;
+    color: #ccccff;
+    font-size: 16px;
+    text-shadow: 1px 1px 5px black;
 }
 
 p {
-    max-width: 230px;
+    max-width: 280px;
     max-height: 30px;
     overflow: hidden;
     margin: 10px;
     font-size: 12px;
+    text-shadow: 1px 1px 5px gray;
 }
 
 img {
@@ -108,7 +117,73 @@ img {
     position: absolute;
     height: 50px;
     width: 50px;
-    right: 5px;
+    right: 10px;
     top: 15px;
+    opacity: .4;
+    -webkit-transform: rotate(-20deg) scale(1.5, 1.5);
+    -webkit-animation: 'growl' 1s linear, 'delay' .4s 1s, 'growl-fade' .5s 1.4s;
 }
 
+@-webkit-keyframes 'text' {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity:.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes 'growl' {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-300px,0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+  }
+}
+
+@-webkit-keyframes 'delay' {
+    0% {
+       opacity: 1;
+       -webkit-transform: translate(0,0);
+    }
+    100%{
+       opacity: 1;
+       -webkit-transform: translate(0,0);
+    }
+}
+
+
+@-webkit-keyframes 'growl-fade' {
+  0% {
+    opacity: 1;
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    opacity: .4;
+    -webkit-transform: rotate(-20deg) scale(1.5, 1.5);
+  }
+}
+
+@-webkit-keyframes 'hide' {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+@-webkit-keyframes 'flip' {
+  0% {
+    -webkit-transform: rotateX(-90deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+  }
+}
