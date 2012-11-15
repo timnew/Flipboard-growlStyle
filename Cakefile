@@ -48,6 +48,9 @@ runWatch = (options, action) ->
         console.log "#{file} Changed..."
         action(options)
 
+open = (path) ->
+  require('child_process').spawn('open',[path])
+
 task "bundle", "Build growlStyle Bundle", (options) ->
   rootPath = getLocalPath("#{styleName}.growlStyle")
   fs.mkdirsSync path.join(rootPath, "Contents", "Resources")
@@ -62,6 +65,7 @@ task "psudo", "Open fake page in browser", (options) ->
     compileJade getLocalPath('source', 'template.jade'), getLocalPath('psudo'), true, loadModel(options.psudo)
     compileLess getLocalPath('source', 'default.less'), getLocalPath('psudo')
   open getLocalPath('psudo', 'template.html')
+
 task "live", "Deploy to installed package", (options) ->
   runWatch options, ->
     rootPath = path.join(process.env.HOME,'Library/Application Support/Growl/Plugins', "#{styleName}.growlStyle")
