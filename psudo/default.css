@@ -18,7 +18,9 @@ body {
 }
 
 .notification h1 {
+  max-height: 16px;
   margin: 0;
+  overflow: hidden;
   font-size: 10pt;
   color: white;
   text-shadow: #000000 0.1em 0.1em 0.2em;
@@ -33,7 +35,9 @@ body {
 }
 
 .notification p {
+  max-height: 39px;
   margin: 0;
+  overflow: hidden;
   font-size: 8pt;
   color: #aaf;
   text-shadow: #000000 0.1em 0.1em 0.2em;

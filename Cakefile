@@ -36,9 +36,8 @@ option '-p', '--psudo [file]', 'Psudo model file, default is psudo.json'
 option '-w', '--watch', "Watch file change"
 
 runWatch = (options, action) ->
-  unless options.watch
-    action(options)
-    return
+  action(options)
+  return unless options.watch
   console.info "INFO: Watching..."
   files = fs.readdirSync getLocalPath('source')
   console.log '"Tracking files:'
