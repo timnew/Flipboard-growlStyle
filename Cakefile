@@ -1,7 +1,7 @@
 fs = require 'fs-extra'
 path = require 'path'
 
-styleName = "Television"
+styleName = "Flipboard"
 
 getLocalPath = (pathComponents...) ->
   pathComponents.unshift(__dirname)
@@ -61,7 +61,7 @@ task "psudo", "Open fake page in browser", (options) ->
     fs.copy getLocalPath('source','growl.png'), getLocalPath('psudo','growl.png') unless fs.existsSync getLocalPath('psudo','growl.png')
     compileJade getLocalPath('source', 'template.jade'), getLocalPath('psudo'), true, loadModel(options.psudo)
     compileLess getLocalPath('source', 'default.less'), getLocalPath('psudo')
-
+  open getLocalPath('psudo', 'template.html')
 task "live", "Deploy to installed package", (options) ->
   runWatch options, ->
     rootPath = path.join(process.env.HOME,'Library/Application Support/Growl/Plugins', "#{styleName}.growlStyle")

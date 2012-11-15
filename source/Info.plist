@@ -3,25 +3,25 @@
 <plist version="1.1">
 <dict>
 	<key>CFBundleName</key>
-	<string>Television</string>
+	<string>Flipboard</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>USA</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Television Style</string>
+	<string>Flipboard Style</string>
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>com.Growl.WebKit.Television</string>
+	<string>com.Growl.WebKit.Flipboard</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>CFBundlePackageType</key>
 	<string>GWKS</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2</string>
+	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>GRRR</string>
 	<key>CFBundleVersion</key>
-	<string>1.2</string>
+	<string>1.0</string>
 	<key>CSResourcesFileMapped</key>	
 	<string>yes</string>
 	<key>GrowlPluginAuthor</key>
