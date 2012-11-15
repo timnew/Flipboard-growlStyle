@@ -7,8 +7,18 @@ html
     style(type="text/css")
       @import URL("default.css");
   body(style=bodyStyle)
-    .notification(class=priority, style="opacity: #{opacity}")
-      h1= title
-      hr
-      p= text
-    img(src=image)
+    .container(class=priority, style="opacity: #{opacity}")
+      .slice1
+        .board
+      .slice2
+        .board
+      .slice3
+        .board
+      .slice4
+        .board
+      .slice5
+        .board
+      .text
+        h1= title
+        p= text
+      img(src=image)

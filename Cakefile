@@ -43,7 +43,7 @@ runWatch = (options, action) ->
   console.log '"Tracking files:'
   for file in files
     console.log "  #{file}"
-    fs.watchFile getLocalPath('source', file), (current, previous) ->
+    fs.watchFile getLocalPath('source', file), {interval: 1000}, (current, previous) ->
       unless current.mtime == previous.mtime
         console.log "#{file} Changed..."
         action(options)

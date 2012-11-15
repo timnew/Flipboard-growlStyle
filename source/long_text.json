@@ -1,6 +1,6 @@
 {
     "priority": "normal",
-    "opacity": "90%",
+    "opacity": ".9",
     "title": "Lorem ipsum dolor",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id odio nisl, ac sagittis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id odio nisl, ac sagittis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id odio nisl, ac sagittis orci.",
     "image": "growl.png",
