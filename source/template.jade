@@ -8,17 +8,14 @@ html
       @import URL("default.css");
   body(style=bodyStyle)
     .container(class=priority, style="opacity: #{opacity}")
-      .slice1
-        .board
-      .slice2
-        .board
-      .slice3
-        .board
-      .slice4
-        .board
-      .slice5
-        .board
-      .text
-        h1= title
-        p= text
+      - sliceCount = 10;
+      - for(var i=0; i< sliceCount; i++)
+        div(class="slice#{i}")
+          .board
+            h1= title
+            p= text
+      //
+        - for(var i=0; i< sliceCount; i++)
+          = "\n.slice" + i +" { .slice(" + i + "); }\n"
+
       img(src=image)
